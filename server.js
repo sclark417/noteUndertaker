@@ -12,8 +12,8 @@ app.use(express.json());
 app.use("/assets", express.static("./assets"));
 
 //require the routes that we have set up in our routing folder.
-require("./routing/html-routes")(app);
-require("./routing/api-routes")(app);
+require("./Develop/db/routing/html-routes")(app);
+require("./Develop/db/routing/api")(app);
 
 //Starts the server listening and creates a console log message that the app is listening at PORT 8014 or the environmental variable port.
 app.listen(PORT, function () {
