@@ -9,7 +9,7 @@ var PORT = process.env.PORT || 8014;
 //Set middleware.
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use("/public", express.static("public"));
+app.use(express.static("public"));
 
 //require the routes that we have set up in our routing folder.
 require("./Develop/db/routing/html-routes")(app);
